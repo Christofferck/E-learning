@@ -1,0 +1,210 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Nitrogenkredsløbet</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		<script src="js/nitrogenkredsloebet.js"></script>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<img src="img/logo.png" width="60px" height="50px" alt="Logo">
+			</nav>
+		</header>
+		<section>
+			<img src="img/hero.png" alt="Nitrogenkredsløbet">
+			<article id="introtext">
+				<p>Denne quiz er supplerende undervisningsmateriale, som er baseret på nitrogenkredsløbet og dets påvirkning på vores verden.<br>
+					Der er i alt fem spørgsmål. De første fire kan besvares med en basisk grundviden, og den sidste er et opsummerende spørgsmål.<br>
+					Når du trykker på en svarmulighed, vil der dukke en faktaboks op, som beskriver det rigtige svar. Derfra vil det ikke være muligt at ændre i din besvarelse.<br>
+					Når du er færdig med quizzen, vil der være et diagram, som viser dit resultat i procent.<br><br>
+					God fornøjelse!</p>
+			</article>
+		</section>
+		<form>
+			<section class="section" id="question1">
+				<img class="illustrations" src="img/lynspaltning.png" alt="lynspaltning">
+				<article class="question">
+					<p>Hvordan bliver N2 og O2 atomer spaltet til enkelte N og O atomer?</p>
+				</article>
+				<article class="answer">
+					<ul>
+	          <li>
+	            <input type="radio" id="q1fi-option" name="q1selector" onclick="showQ2()" value="q1a1">
+	            <label for="q1fi-option" class="graylabel">Kemisk reaktion</label>
+	            <div class="radio radio4"></div>
+	          </li>
+	          <li>
+	            <input type="radio" id="q1se-option" name="q1selector" onclick="showQ2()" value="q1a2">
+	            <label for="q1se-option" class="graylabel">Vanddamp</label>
+	            <div class="radio radio1"></div>
+	          </li>
+						<li>
+							<input type="radio" id="q1th-option" name="q1selector" onclick="showQ2()" value="q1a3">
+							<label for="q1th-option" class="graylabel">Lyn</label>
+							<div class="radio radio3"></div>
+						</li>
+	          <li>
+	            <input type="radio" id="q1fo-option" name="q1selector" onclick="showQ2()" value="q1a4">
+	            <label for="q1fo-option" class="graylabel">Bakterier</label>
+	            <div class="radio radio2"></div>
+	          </li>
+	        </ul>
+				</article>
+				<article class="fact" id="fact1">
+					<h1>Faktaboks</h1>
+					<p>Lyn spalter N2 og O2 atomer til enkelte N og O atomer. Her reagerer disse atomer og vanddamp med hinanden.
+						Når det kommer ned til jorden ved hjælp af regn, bliver det dannet til nitrat (NO3-), som planterne nu kan optage.</p>
+				</article>
+			</section>
+			<section class="section" id="question2">
+				<img class="illustrations" src="img/ammonium.png" alt="ammonium">
+				<article class="question">
+					<p>Hvad er den kemiske betegnelse for Ammonium?</p>
+				</article>
+				<article class="answer">
+					<ul>
+	          <li>
+	            <input type="radio" id="q2fi-option" name="q2selector" onclick="showQ3()" value="q2a1">
+	            <label for="q2fi-option" class="graylabel">NH3</label>
+	            <div class="radio radio2"></div>
+	          </li>
+	          <li>
+	            <input type="radio" id="q2se-option" name="q2selector" onclick="showQ3()" value="q2a2">
+	            <label for="q2se-option" class="graylabel">NH4+</label>
+	            <div class="radio radio3"></div>
+	          </li>
+						<li>
+							<input type="radio" id="q2fo-option" name="q2selector" onclick="showQ3()" value="q2a3">
+							<label for="q2fo-option" class="graylabel">NO3-</label>
+							<div class="radio radio4"></div>
+						</li>
+	          <li>
+	            <input type="radio" id="q2th-option" name="q2selector" onclick="showQ3()" value="q2a4">
+	            <label for="q2th-option" class="graylabel">NO2-</label>
+	            <div class="radio radio1"></div>
+	          </li>
+	        </ul>
+				</article>
+				<article class="fact" id="fact2">
+					<h1>Faktaboks</h1>
+					<p>Ammoniak (NH3) synker ned i jorden, hvor det reagerer med H+ ioner fra vandet,
+						og bliver dernæst omdannet til ammonium (NH4+).</p>
+				</article>
+			</section>
+			<section class="section" id="question3">
+				<img class="illustrations" src="img/ikkenitrogen.png" alt="ikkenitrogen">
+				<article class="question">
+					<p>Hvad indeholder <strong>ikke</strong> nitrogen?</p>
+				</article>
+				<article class="answer">
+					<ul>
+	          <li>
+	            <input type="radio" id="q3fi-option" name="q3selector" onclick="showQ4()" value="q3a1">
+	            <label for="q3fi-option" class="graylabel">Afføring</label>
+	            <div class="radio radio4"></div>
+	          </li>
+	          <li>
+	            <input type="radio" id="q3se-option" name="q3selector" onclick="showQ4()" value="q3a2">
+	            <label for="q3se-option" class="graylabel">Burger</label>
+	            <div class="radio radio1"></div>
+	          </li>
+						<li>
+							<input type="radio" id="q3fo-option" name="q3selector" onclick="showQ4()" value="q3a3">
+							<label for="q3fo-option" class="graylabel">Blod</label>
+							<div class="radio radio2"></div>
+						</li>
+	          <li>
+	            <input type="radio" id="q3th-option" name="q3selector" onclick="showQ4()" value="q3a4">
+	            <label for="q3th-option" class="graylabel">Kobber</label>
+	            <div class="radio radio3"></div>
+	          </li>
+	        </ul>
+				</article>
+				<article class="fact" id="fact3">
+					<h1>Faktaboks</h1>
+					<p>Nitrogen er uundværlig for alle levende organismer, idet det indgår i de organiske stoffer som cellerne er bygget af.
+						Mennesker og dyr optager nitrogen gennem føden, og det nitrogen vi ikke bruger, bliver udskilt sammen med vores affaldsstoffer.</p>
+				</article>
+			</section>
+			<section class="section" id="question4">
+				<img class="illustrations" src="img/nitratoptagning.png" alt="nitratoptagning">
+				<article class="question">
+					<p>Hvordan optager planter nitrat?</p>
+				</article>
+				<article class="answer">
+					<ul>
+	          <li>
+	            <input type="radio" id="q4fi-option" name="q4selector" onclick="showQ5()" value="q4a1">
+	            <label for="q4fi-option" class="graylabel">Nitrat bliver nedbrudt af bakterier og optaget af planter</label>
+	            <div class="radio radio2"></div>
+	          </li>
+	          <li>
+	            <input type="radio" id="q4se-option" name="q4selector" onclick="showQ5()" value="q4a2">
+	            <label for="q4se-option" class="graylabel">Nitrogen opløses i vand og optages igennem rødderne</label>
+	            <div class="radio radio3"></div>
+	          </li>
+						<li>
+							<input type="radio" id="q4fo-option" name="q4selector" onclick="showQ5()" value="q4a3">
+							<label for="q4fo-option" class="graylabel">Nitrat bliver optaget af bladende igennem sollys</label>
+							<div class="radio radio1"></div>
+						</li>
+	          <li>
+	            <input type="radio" id="q4th-option" name="q4selector" onclick="showQ5()" value="q4a4">
+	            <label for="q4th-option" class="graylabel">Nitrogen og ammoniak bliver optaget igennem fotosyntese</label>
+	            <div class="radio radio4"></div>
+	          </li>
+	        </ul>
+				</article>
+				<article class="fact" id="fact4">
+					<h1>Faktaboks</h1>
+					<p>De fleste planter optager nitrogen i form af nitrat, (NO3-) fra jorden. Nitrat er opløst i vand og optages gennem rødderne.
+						Det transporteres til bladende, her bruges det organiske stof dannet ved fotosyntesen til proteiner og DNA.</p>
+				</article>
+			</section>
+			<section class="section" id="question5">
+				<img src="img/graes.png" id="graes" alt="graes">
+				<article class="question">
+					<p>Hvad er <strong>ikke</strong> en proces i nitrogenkredsløbet?</p>
+				</article>
+				<article class="answer">
+					<ul>
+						<li>
+							<input type="radio" id="q5fi-option" name="q5selector" onclick="showQ5Fact()" value="q5a1">
+							<label for="q5fi-option" class="graylabel">Nitratfikation</label>
+							<div class="radio radio3"></div>
+						</li>
+						<li>
+							<input type="radio" id="q5se-option" name="q5selector" onclick="showQ5Fact()" value="q5a2">
+							<label for="q5se-option" class="graylabel">Nitrifikation</label>
+							<div class="radio radio4"></div>
+						</li>
+						<li>
+							<input type="radio" id="q5th-option" name="q5selector" onclick="showQ5Fact()" value="q5a3">
+							<label for="q5th-option" class="graylabel">Denitrifikation</label>
+							<div class="radio radio2"></div>
+						</li>
+						<li>
+							<input type="radio" id="q5fo-option" name="q5selector" onclick="showQ5Fact()" value="q5a4">
+							<label for="q5fo-option" class="graylabel">Ammonifikation</label>
+							<div class="radio radio1"></div>
+						</li>
+	        </ul>
+				</article>
+				<article class="fact" id="fact5">
+					<h1>Faktaboks</h1>
+					<p>Nitrifikation, bakteriers omdannelse (iltning) af ammoniak og ammonium til nitrit og af nitrit til nitrat; den modsatte proces af denitrifikation.
+						Denitrifikation, fjernelse af nitrat. Denne proces udføres af bakterier i jord og vand.
+						Nitrat (NO3-), fx hidrørende fra kunstgødning eller fra nitrificerende bakteriers aktivitet,
+						bliver af denitrificerende bakterier omsat til frit kvælstof (N2), som afgives til atmosfæren.
+						ammonifikation, mikroorganismers produktion af ammoniak, når de nedbryder organiske kvælstofforbindelser.</p>
+				</article>
+				<button name="submit" value="submit" onclick="test(this.form); return false;">Se resultat</button>
+				<div id="piechart"></div>
+			</section>
+		</form>
+	</body>
+</html>

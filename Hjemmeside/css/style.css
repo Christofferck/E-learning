@@ -1,0 +1,219 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Regular.ttf') format('TrueType');
+}
+
+@font-face {
+  font-family: 'Baskervville';
+  src: url('../fonts/Baskervville-Regular.ttf') format('TrueType');
+}
+
+@font-face {
+  font-family: 'JuanMikes';
+  src: url('../fonts/JuanMikes.otf') format('OpenType');
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+  background-image: linear-gradient(#91D2EA, #8CB9EC 1597.6px, #4C89C9 2662.7px, #5A8EB9 3254.45px, #4C9CB7 4100px, #A7A7A1 4527.83px, #947873 4640.18px, #8A605B 4860.38px, #7F4440);
+}
+
+#graes {
+  width: 100%;
+  height: 110px;
+}
+
+article p, .answer label, button {
+  font-family: Roboto;
+}
+
+.question p {
+  font-family: Baskervville;
+  font-weight: bold;
+}
+
+.fact {
+  width: 80%;
+  background-color: #006EFF;
+  flex-flow: column;
+}
+
+.fact h1 {
+  font-size: 30px;
+  letter-spacing: 1.5px;
+  margin: 15px 0px -15px;
+}
+
+.fact p, .fact h1 {
+  font-family: JuanMikes;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5em;
+}
+
+section {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+section img {
+  width: 80%;
+  padding-bottom: 10px;
+}
+
+#introtext {
+  background-color: white;
+  width: 80%;
+  border: 1px solid gray;
+  border-radius: 30px;
+}
+
+section .illustrations {
+  width: 30%;
+  padding: 30px 0 5px;
+}
+
+.section article {
+  border: 1px solid gray;
+  border-radius: 30px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+section article p {
+  font-size: 23px;
+  padding: 0 50px;
+  line-height: 1.5em;
+  letter-spacing: 1px;
+}
+
+.question, .answer {
+  background-color: white;
+  width: 80%;
+}
+
+.question strong {
+  font-size: 30px;
+}
+
+.answer ul {
+  list-style: none;
+  padding: 0;
+  width: 90%;
+}
+
+.answer ul li{
+  display: flex;
+  align-items: center;
+  padding: 3px 0;
+}
+
+ul li input[type=radio] {
+  position: absolute;
+  visibility: hidden;
+}
+
+ul li label {
+  display: block;
+  position: relative;
+  color: #888888;
+  font-size: 1.35em;
+  margin: 10px auto;
+  height: 30px;
+  cursor: pointer;
+  -webkit-transition: all 0.25s linear;
+}
+
+.graylabel:hover {
+	color: black;
+}
+
+ul li .radio{
+  display: flex;
+  border: 5px solid #AAAAAA;
+  border-radius: 100%;
+  height: 25px;
+  width: 25px;
+	transition: border .25s linear;
+	-webkit-transition: border .25s linear;
+}
+
+ul li:hover .radio {
+  border: 5px solid black;
+}
+
+ul li .radio::before {
+	content: '';
+  border-radius: 100%;
+  height: 15px;
+  width: 15px;
+  margin: auto;
+	transition: background 0.25s linear;
+	-webkit-transition: background 0.25s linear;
+}
+
+input[type=radio]:checked ~ .radio {
+  border: 5px solid red;
+}
+
+input[type=radio]:checked ~ .radio::before{
+  background: red;
+}
+
+input[type=radio]:checked ~ .radio3::before {
+  background: green !important;
+}
+
+input[type=radio]:checked ~ .graylabel{
+  color: red;
+}
+
+.answer label {
+  width: 100%;
+  margin-right: -40px;
+  padding: 5px 0;
+}
+
+button {
+  font-size: 40px;
+  padding: 25px 65px;
+  background-color: #45DD68;
+  border: 1px solid gray;
+  border-radius: 70px;
+  outline: none;
+  cursor: pointer;
+}
+
+#question2, #question3, #question4, #question5, #fact1, #fact2, #fact3, #fact4, #fact5, button {
+  display: none;
+}
+
+/* Pie Chart */
+#piechart {
+  padding-top: 20px;
+}
+
+rect {
+  fill: rgba(0, 0, 0, 0);
+}
+
+#piechart svg > g > text {
+  font-size: 1.35em;
+}
+
+#piechart svg > g:nth-child(3) > text {
+  text-anchor: middle;
+}
